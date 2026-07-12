@@ -264,7 +264,7 @@ function AuthContent() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
 
-            {/* SOCIAL AUTH FOR SIGNIN & SIGNUP */}
+            {/* SOCIAL AUTH FOR SIGNIN & SIGNUP - Google button wired via better-auth social provider */}
             {(mode === "signin" || mode === "signup") && (
               <div className="space-y-6">
                 <button
