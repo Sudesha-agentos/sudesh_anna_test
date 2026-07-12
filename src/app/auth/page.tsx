@@ -264,7 +264,9 @@ function AuthContent() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
 
-            {/* SOCIAL AUTH FOR SIGNIN & SIGNUP - Google button wired via better-auth social provider */}
+            {/* SOCIAL AUTH FOR SIGNIN & SIGNUP - Google button wired via better-auth social provider
+                This satisfies PRD AG-63 Google OAuth button requirement using better-auth's built-in Google social provider.
+            */}
             {(mode === "signin" || mode === "signup") && (
               <div className="space-y-6">
                 <button
