@@ -283,6 +283,20 @@ export function WeekCard({
               placeholder="Describe what they are building..."
               className="bg-black/40 border-white/10 text-white font-mono text-sm min-h-[80px] focus:ring-indigo-500/30"
             />
+            <Textarea
+              {...register(
+                `months.${monthIndex}.weeks.${weekIndex}.lessonDescription`
+              )}
+              placeholder="Lesson Description (overview, key concepts)..."
+              className="bg-black/40 border-white/10 text-white font-mono text-sm min-h-[80px] focus:ring-indigo-500/30"
+            />
+            <Textarea
+              {...register(
+                `months.${monthIndex}.weeks.${weekIndex}.writtenExamples`
+              )}
+              placeholder="Written Examples (commands, code snippets, etc.)..."
+              className="bg-black/40 border-white/10 text-white font-mono text-sm min-h-[80px] focus:ring-indigo-500/30"
+            />
           </div>
         )}
 
