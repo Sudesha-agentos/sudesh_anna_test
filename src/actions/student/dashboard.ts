@@ -355,6 +355,8 @@ export async function getCourseContent(studentId: string, courseId: string) {
 
     const structuredData = months.map((month) => {
       const weeksWithStatus = month.weeks.map((week) => {
+        const lessonDescription = week.lessonDescription ?? null;
+        const writtenExamples = week.writtenExamples ?? null;
         // Check Project Status
         const projSub = week.projectSubmissions[0];
         const isProjectPending = projSub?.status === "pending";
@@ -426,6 +428,8 @@ export async function getCourseContent(studentId: string, courseId: string) {
         return {
           ...week,
           assessments: weekAssessments,
+          lessonDescription,
+          writtenExamples,
           isLocked: false,
           isCompleted: isWeekCompleted,
           isPending: isPending,

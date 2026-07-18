@@ -318,7 +318,9 @@ export const courseWeek = pgTable(
     isProject: boolean("is_project").default(false).notNull(),
     projectTitle: text("project_title"),
     projectDescription: text("project_description"),
-    content: text("content"), // Description or learning content
+    content: text("content"), // High-level week content / plan
+    lessonDescription: text("lesson_description"), // Detailed lesson description for video lessons
+    writtenExamples: text("written_examples"), // Commands/code snippets for video lessons
     resources: json("resources"), // Array of { title, link }
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at")
