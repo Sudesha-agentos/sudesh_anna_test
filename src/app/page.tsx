@@ -14,6 +14,7 @@ import { PartnersStrip } from "@/components/home/partners-strip";
 import { CollaboratedCompaniesSection } from "@/components/home/collaborated-companies-section";
 import { CollaboratedCollegesSection } from "@/components/home/collaborated-colleges-section";
 import { FinalCta } from "@/components/home/final-cta";
+import { HomeContactPopupController } from "@/components/home/contact-popup";
 
 export const dynamic = "force-dynamic";
 
@@ -78,8 +79,8 @@ export default async function Home() {
       <CollaboratedCollegesSection />
       <FinalCta />
 
-      {/* 9. Final CTA */}
- 
+      {/* Scroll-triggered homepage contact popup */}
+      <HomeContactPopupController />
     </>
   );
 }
